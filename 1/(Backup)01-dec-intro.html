@@ -1,0 +1,542 @@
+<!-- //node -v //npm -v console.log("Hello") -->
+
+
+<!DOCTYPE html>
+<html>
+<script src="./01-dec-intro.js"></script>
+
+<body>
+
+    <h2>JavaScript Variables</h2>
+
+    <p id="demo">Date: </p>
+
+    <button onclick="document.getElementById('demo').innerHTML= Date()">Click and start</button>
+    <button onclick="this.innerHTML= sam()">Show result</button>
+
+
+    <p id="demo"></p>
+
+
+
+    <script>
+        function sam() {
+            document.write("HE"); //write 
+
+
+            // create h1 with text 
+            var h1 = document.createElement("h1");
+            h1.appendChild(document.createTextNode("Hello member"));
+            document.getElementById("demo").appendChild(h1);
+
+        }
+    </script>
+
+
+    <script>
+        function sam() {
+
+            // create h1 with text 
+            var h1 = document.createElement("h1");
+            h1.appendChild(document.createTextNode("Hello member"));
+            document.getElementById("demo").appendChild(h1);
+
+            document.write("HE"); //write 
+
+            document.getElementById("demo").innerHTML = "<h1>Hello member</h1>";
+
+        }
+    </script>
+
+
+    <script>
+        length // 
+        let txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let length = txt.length;
+
+
+
+        slice(start, end) //
+
+        let str = "Apple, Banana, Kiwi";
+        let part = str.slice(7, 13);
+
+        let str = "Apple, Banana, Kiwi";
+        let part = str.slice(-12, -6);
+
+        let part = str.slice(7);
+        let part = str.slice(-12);
+
+
+        substring(start, end) //
+
+        let str = "Apple, Banana, Kiwi";
+        let part = substring(7, 13);
+
+
+        substr(start, length) // 
+        let str = "Apple, Banana, Kiwi";
+        let part = str.substr(7, 6);
+
+
+        let str = "Apple, Banana, Kiwi";
+        let part = str.substr(7);
+
+        let str = "Apple, Banana, Kiwi";
+        let part = str.substr(-4);
+
+
+
+        replace() //
+
+        let text = "Please visit Microsoft!";
+        let newText = text.replace("Microsoft", "W3Schools");
+
+
+        let text = "Please visit Microsoft and Microsoft!";
+        let newText = text.replace("Microsoft", "W3Schools");
+
+        let text = "Please visit Microsoft!";
+        let newText = text.replace("MICROSOFT", "W3Schools");
+
+
+        let text = "Please visit Microsoft!";
+        let newText = text.replace(/MICROSOFT/i, "W3Schools");
+
+
+        let text = "Please visit Microsoft and Microsoft!";
+        let newText = text.replace(/Microsoft/g, "W3Schools");
+
+
+        toUpperCase()
+        let text1 = "Hello World!";
+        let text2 = text1.toUpperCase();
+
+
+        let text1 = "Hello World!"; // String
+        let text2 = text1.toLowerCase(); // text2 is text1 converted to lower
+
+
+
+        concat()
+        let text1 = "Hello";
+        let text2 = "World";
+        let text3 = text1.concat(" ", text2);
+
+
+        text = "Hello" + " " + "World!";
+        text = "Hello".concat(" ", "World!");
+
+
+        trim();
+        let text = "      Hello World!      ";
+        let a = text.trim(); // Returns "Hello World!"
+
+
+        padStart
+        let text = "5";
+        let padded = text.padStart(4, 0);
+
+
+
+        padEnd
+        let text = "5";
+        let padded = text.padEnd(4, 0);
+
+
+
+        charAt(position)
+
+        let text = "HELLO WORLD";
+        let char = text.charAt(0);
+
+
+        charCodeAt(position)
+        let text = "HELLO WORLD";
+        let char = text.charCodeAt(0);
+
+
+        // ACCESS STRING 
+        let text = "HELLO WORLD";
+        let char = text[0];
+
+        let text = "HELLO WORLD";
+        text[0] = "A"; // Gives no error, but does not work
+
+
+        split()
+        let text = "a,b,c,d,e,f";
+        const myArray = text.split(",");
+    </script>
+
+    <script>
+        /**
+         * length
+         */
+
+        // let txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        // let length = txt.length;
+
+        // let trx = "My Name"; // count 1 to end . so its 7 
+        // let c = trx.length;
+        // console.log(c);
+
+
+        // slice(start, end) //
+        /**
+         * slice(start, end)
+         */
+
+        // let str = "My name is sam";
+        // let a = str.slice(3, 7); //name // 0 to start then agg porjonto count korbw
+        // console.log(a);
+
+
+        // let str = "Apple sam";
+        // let part = str.slice(-3, 9); //sam // picon theke count 0 to agg porjonto then 9 mane samn dike jabe
+        // console.log(part);
+
+        // let str = "Apple, Banana, Kiwi";
+        // let part = str.slice(-12, -6);
+        // console.log(part);
+
+        // let str = "Apple, Banana, Kiwi";
+        // let part = str.slice(7); //Banana, Kiwi
+        // console.log(part);
+
+        // let str = "Apple, Banana, Kiwi";
+        // let part = str.slice(-12); //Banana, Kiwi
+        // console.log(part);
+
+
+
+
+        /**
+         * substring(start, end) //
+         */
+
+        // let str = "Apple, Banana, Kiwi";
+        // let part = str.substring(7, 13); //Banana
+        // console.log(part);
+
+
+
+
+
+        // substr(start, length) // 
+        // let str = "Apple, Banana, Kiwi";
+        // let part = str.substr(7, 6);
+
+
+        // let str = "Apple, Banana, Kiwi";
+        // let part = str.substr(7);
+
+        // let str = "Apple, Banana, Kiwi";
+        // let part = str.substr(-4);
+
+
+
+        // replace() //
+
+        // let text = "Please visit Microsoft!";
+        // let newText = text.replace("Microsoft", "W3Schools");
+
+        // let sam = "My name is sabbir";
+        // let sa = sam.toLowerCase();
+
+        // let a = sa.replace("Sabbir", "sam");
+        // console.log(a);
+
+
+        // let text = "Please visit Microsoft and Microsoft!";
+        // let newText = text.replace("Microsoft", "W3Schools");
+
+        // let text = "Please visit Microsoft!";
+        // let newText = text.replace("MICROSOFT", "W3Schools");
+
+
+        // let text = "Please visit Microsoft!";
+        // let newText = text.replace(/MICROSOFT/i, "W3Schools");
+
+
+        // let text = "Please visit Microsoft and Microsoft!";
+        // let newText = text.replace(/miCRosoft/i, "W3Schools"); //i dewa mane case insensitive kore dewa
+        // let newText = text.replace(/visit/i, "SAM");
+
+        // to replace all mathces 
+
+        // let text = "My name is Sabbir Sabbir sabbir Sam";
+        // let y = text.replace(/sabbir/g, "ahmed");
+        // console.log(y);
+
+
+        // console.log(text);
+        // console.log(newText);
+
+
+        // toUpperCase()
+        // let text1 = "Hello World!";
+        // let text2 = text1.toUpperCase();
+
+
+        // let text1 = "Hello World!"; // String
+        // let text2 = text1.toLowerCase(); // text2 is text1 converted to lower
+
+
+
+        // concat()
+        // let text1 = "Hello";
+        // let text2 = "World";
+        // let text3 = text1.concat(" ", text2);
+        // console.log(text3);
+
+        // let s = text1.concat(" ", text1);
+        // console.log(s);
+
+
+        // text = "Hello" + " " + "World!";
+        // text = "Hello".concat(" ", "World!");
+
+
+        // trim();
+        // let text = "      Hello World!      ";
+        // let a = text.trim(); // Returns "Hello World!"
+
+        // let a = "   sa  m    ";
+        // let s = a.trim();
+        // console.log(a);
+        // console.log(s);
+
+
+        // padStart
+        // let text = "5";
+        // let padded = text.padStart(8, 0);
+
+        // let t = "sabbir";
+        // let add0fromleft = t.padStart(8, "tt"); // total 4 ta gor and 0 add hbe left theke
+        // console.log(add0fromleft); //0005  //ttsabbir
+
+
+
+        // padEnd
+        // let text = "5";
+        // let padded = text.padEnd(4, 0);
+
+
+
+        // charAt(position)
+
+        // let text = "HELLO WORLD";
+        // let char = text.charAt(0);
+
+        // console.log(char); // individual character ber korte 
+
+
+        // charCodeAt(position)
+        // let text = "AELLO WORLD";
+        // let char = text.charCodeAt(0);
+        // console.log(char); // A er value find korte 
+
+
+        // // ACCESS STRING 
+        // let text = "HELLO WORLD";
+        // let char = text[0];
+        // console.log(char);
+
+        // let text = "HELLO WORLD";
+        // text[0] = "A"; // Gives no error, but does not work
+
+
+        // split()
+        // let text = "a,b,c,d,e,f";
+        // const myArray = text.split(",");
+
+        // text.split(",") // Split on commas
+        // text.split(" ") // Split on spaces
+        // text.split("|")
+
+        // let t = "s,ab,c,d";
+        // const ar = t.split(",");
+        // console.log(ar);
+        // [ 's', 'ab', 'c', 'd' ]
+
+        // let t = "s,ab|c,d";
+        // const ar = t.split("|"); //koi split hbe 
+        // console.log(ar);
+    </script>
+
+    <script>
+        /**
+         * 
+         */
+        /**
+         * String indexOf()
+         */
+
+        // let str = "locate where 'locate' occurs!";
+        // let s = str.indexOf("locate"); //7
+        // // let s = str.lastIndexOf("locate"); //21
+        // console.log(s);
+
+
+        // let str = "Please locate where 'locate' occurs!";
+        // let s = str.indexOf("locate", 4);
+        // console.log(s);
+
+        // let str = "Please locate where 'locate' occurs!";
+        // let s = str.lastIndexOf("locate", 4);
+        // console.log(s);
+
+
+
+        /**
+         * String lastIndexOf()
+         */
+        // let str = "Please locate where 'locate' occurs!";
+        // let s = str.lastIndexOf("locate"); //7
+        // // let s = str.indexOf("locate"); //21
+        // console.log(s);
+
+
+
+        /**
+         * String startsWith()
+         */
+
+        // let s = "hello sabbir ahmed sam";
+        // let a = s.search("hello");
+        // console.log(a); //string ta koto theke suru
+
+        /**
+         * String endsWith()
+         */
+        // let str = "Please locate where 'locate' occurs!";
+        // let a = str.search("locate");
+        // console.log(a); //string ta koto theke suru
+
+
+
+        /**
+         * match()
+         */
+        // let s = "hello sabbir ahmed sam";
+        // let a = s.match(/ahm/g);
+        // console.log(a); //string ta koto theke suru
+
+
+        // let s = "hello sabbir ahmed sam";
+        // let a = s.match(/ahm/);
+        // console.log(a); //string ta koto theke suru
+
+
+        // let s = "hello sabbir ahmed sam";
+        // let a = s.match(/ahm/gi); // case insensitive  and global
+        // console.log(a); //string ta koto theke suru
+
+
+        /**
+         * The includes() method returns true if a string contains a specified value.
+         */
+
+        // let text = "Hello world, welcome to the universe.";
+
+        // let a = text.includes("wold");
+        // console.log(a); //retunr true if found else false
+
+
+        // let text = "Hello world, welcome to the universe.";
+
+        // let a = text.includes("world", 5);
+        // console.log(a); //retunr true if found else false
+
+
+        /**
+         * The startsWith() method returns true if a string begins with a specified value, otherwise false:
+         */
+
+        // let text = "Hello world, welcome to the universe.";
+
+        // let a = text.startsWith("Hello");
+        // console.log(a);
+
+
+        /**
+         * The endsWith() method returns true if a string ends with a specified value, otherwise false:
+         */
+
+        // let text = "Hello world, welcome to the universe.";
+
+        // let a = text.endsWith("Hello");
+        // console.log(a);
+
+
+        // let text = "Hello world sa, welcome to the universe.";
+
+        // let a = text.endsWith("world", 11); //Check in the 11 first characters of a string ends with "world":
+        // console.log(a);
+    </script>
+
+    <script>
+        /**
+         * String indexOf()
+         */
+
+        // let str = "Please locate where 'locate' occurs!";
+        // console.log(str.indexOf("locate"));
+
+
+        /**
+         * String lastIndexOf()
+         */
+
+        // let str = "Please locate where 'locate' occurs!";
+        // console.log(str.lastIndexOf("locate"));
+
+
+        /**
+         * String search()
+         */
+        // let str = "Please locate where 'locate' occurs!";
+        // console.log(str.search("locate"));
+
+        /**
+         * String includes()
+         */
+        // let str = "Please locate where 'locate' occurs!";
+        // console.log(str.includes("locate"));
+
+
+        /**
+         * String startsWith()
+         */
+        // let str = "Please locate where 'locate' occurs!";
+        // console.log(str.startsWith("please"));
+
+        /**
+         * String endsWith()()
+         */
+        // let str = "Please locate where 'locate' occurs!";
+        // console.log(str.endsWith()("please"));
+    </script>
+
+    <script>
+        // let text = `Hello World!`;
+        let text =
+
+            `The quick
+            brown fox
+            jumps over
+            the lazy dog`;
+
+
+
+        console.log(text);
+    </script>
+
+
+
+
+
+</body>
+
+</html>
