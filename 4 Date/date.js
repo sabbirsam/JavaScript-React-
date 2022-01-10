@@ -1,4 +1,3 @@
-const days = new Date();
+let t = "";
 
-const d = days.getFullYear(2022, 11, 3);
-console.log(days);
+const today = new Date(2020 / 11 / 05);

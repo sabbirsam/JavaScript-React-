@@ -35,6 +35,13 @@ console.log(da);
 /**
  * 
  */
+const d = new Date();
+// days.setFullYear();
+// d.setMonth(11);
+const c = d.setDate(d.getDate() + 50);
+
+console.log(d);
+console.log(c);
 
 /**
  * 
