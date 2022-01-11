@@ -1,32 +1,14 @@
 function myVoteReg() {
-    let day;
-    switch (new Date().getDay()) {
-        case 0:
-            day = "Sunday";
-            break;
-        case 1:
-            day = "Monday";
-            break;
-        case 2:
-            day = "Tuesday";
-            break;
-        case 3:
-            day = "Wednesday";
-            break;
-        case 4:
-            day = "Thursday";
-            break;
-        case 5:
-            day = "Friday";
-            break;
-        case 6:
-            day = "Saturday";
+    const car = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
 
-        default:
-            day = "Invalid";
+    let c = "";
+
+    for (let i = 0; i < car.length - 1; i++) {
+        c += car[i] + "<br>";
     }
 
-    document.getElementById("sam").innerHTML = "Today is " + day;
+
+    document.getElementById("sam").innerHTML = c;
     // console.log(day);
 
 }
