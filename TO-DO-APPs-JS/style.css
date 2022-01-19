@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-container {
+    width: 1000px;
+    height: 80vh;
+    display: flex;
+}
+
+.status {
+    width: 25%;
+    background-color: #f3f3f3;
+    position: relative;
+    padding: 60px 1rem 0.5rem;
+}
+
+.status:nth-child(even) {
+    background-color: #e9e9e96b;
+}
+
+.status h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #343434;
+    color: #f3f3f3;
+    margin: 0;
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+
+#add_btn {
+    padding: 0.5rem 1rem;
+    background-color: #ccc;
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#add_btn:hover {
+    background-color: #aaa;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+    box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.todo .close {
+    position: absolute;
+    right: 1rem;
+    top: 0rem;
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.todo .close:hover {
+    color: #343444;
+}
+
+
+/* modal */
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.modal {
+    width: 450px;
+    position: fixed;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.3s ease-in-out;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    z-index: 2;
+    background-color: #fff;
+}
+
+.modal.active {
+    top: 15%;
+}
+
+.modal .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.modal .body {
+    padding: 0.75rem;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#overlay.active {
+    display: block;
+}
+
+#todo_input,
+#todo_submit {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    margin: 0.25rem;
+}
+
+#todo_submit {
+    background-color: #4caf50;
+    color: #f3f3f3;
+    font-size: 1.25rem;
+    border: none;
+}
+
+
+/* Tool Tip  */
+
+:root {
+    --arrow-width: 5px;
+    --color-tooltip: #343434;
+    --offset: 1px;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 450px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tooltip {
+    position: relative;
+    border-bottom: 1px dashed darkgray;
+    cursor: pointer;
+}
+
+.tooltip:before {
+    visibility: hidden;
+    content: attr(title);
+    background-color: var(--color-tooltip);
+    color: #f3f3f3;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    position: absolute;
+    white-space: nowrap;
+    /* opacity: 0.7; */
+}
+
+.tooltip:after {
+    visibility: hidden;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: var(--arrow-width) solid transparent;
+}
+
+.tooltip.top:before {
+    bottom: calc(100% + var(--arrow-width) + var(--offset));
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tooltip.top:after {
+    bottom: calc(100% + var(--offset));
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-width: 0;
+    border-top-color: var(--color-tooltip);
+}
+
+.tooltip:hover:before,
+.tooltip:hover:after {
+    visibility: visible;
+}
+
+.tooltip.bottom:before {
+    top: calc(100% + var(--arrow-width) + var(--offset));
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tooltip.bottom:after {
+    top: calc(100% +var(--offset));
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-width: 0;
+    border-bottom-color: var(--color-tooltip);
+}
+
+.tooltip[data-position="left"]:before {
+    right: calc(100% + var(--arrow-width) + var(--offset));
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.tooltip[data-position="left"]:after {
+    right: calc(100% +var(--offset));
+    top: 50%;
+    transform: translateY(-50%);
+    border-right-width: 0;
+    border-left-color: var(--color-tooltip);
+}
+
+.tooltip.right:before {
+    left: calc(100% + var(--arrow-width) + var(--offset));
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.tooltip.right:after {
+    left: calc(100% +var(--offset));
+    top: 50%;
+    transform: translateY(-50%);
+    border-left-width: 0;
+    border-right-color: var(--color-tooltip);
+}
