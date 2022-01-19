@@ -161,3 +161,153 @@ letters.forEach(function(a) {
 })
 
 document.getElementById("demo").innerHTML = text;
+
+/**
+ * values()' 
+ */
+
+
+const letters = new Set(["a", "b", "c"]);
+
+
+let text = "";
+for (const s of letters.values()) {
+    text += s + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+
+/**
+ * 
+ */
+
+
+const fruits = new Map(
+    [
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]
+);
+
+document.getElementById("demo").innerHTML = fruits.get("apples");
+document.getElementById("sam").innerHTML = fruits.get("bananas");
+
+
+
+
+/**
+ * all value get
+ */
+// Create a Map
+const fruits = new Map(
+    [
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]
+);
+
+let c = "";
+for (const z of fruits.values()) {
+    c += z + "<br>";
+}
+
+document.getElementById("sam").innerHTML = c;
+
+document.getElementById("demo").innerHTML = fruits.get("apples");
+
+/**
+ * add value using set Maps' 
+ */
+// Create a Map
+const fruits = new Map();
+
+// Set Map Values
+fruits.set("apples", 500);
+fruits.set("bananas", 300);
+fruits.set("oranges", 200);
+
+document.getElementById("demo").innerHTML = fruits.get("apples");
+
+// Create a Map
+const fruits = new Map();
+
+// Set Map Values
+fruits.add("apples", 500); // WRONG:  will not work, It need set but for set it need add.
+fruits.set("bananas", 300); //Right
+fruits.set("oranges", 200);
+
+document.getElementById("demo").innerHTML = fruits.get("apples");
+
+/**
+ * add value can be change on Maps' 
+ */
+// Create a Map
+const fruits = new Map([
+    ["apple", 500],
+    ["banana", 600],
+    ["kola", 600]
+]);
+
+fruits.set("apple", 600); // value can be change
+
+// Set Map Values
+
+
+document.getElementById("demo").innerHTML = fruits.get("apple");
+
+
+/**
+ * add value using set Maps' 
+ */
+// Create a Map
+const fruits = new Map([
+    ["apple", 500],
+    ["banana", 600],
+    ["kola", 600]
+]);
+
+fruits.set("apple", 600); // value can be change
+fruits.delete("banana"); // can delete
+
+// Set Map Values
+
+
+document.getElementById("demo").innerHTML = fruits.get("banana");
+
+
+
+/**
+ * add value using set Maps' 
+ */
+// Create a Map
+const fruits = new Map([
+    ["apple", 500],
+    ["banana", 600],
+    ["kola", 600]
+]);
+
+fruits.set("apple", 600); // value can be change
+fruits.delete("banana"); // can delete
+
+// Set Map Values
+
+
+document.getElementById("demo").innerHTML = fruits.has("banana"); // false
+
+/**
+ * value and entries
+ */
+
+const fruits = new Map([
+    ["apples", 500],
+    ["bananas", 300],
+    ["oranges", 200]
+]);
+
+let text = "";
+for (const x of fruits.entries()) { //values or  entries
+    text += x + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;

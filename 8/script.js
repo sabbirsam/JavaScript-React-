@@ -1,17 +1,21 @@
 /**
- * forEach test
+ * add value using set Maps' 
  */
+const fruits = new Map([
+    ["apples", 500],
+    ["bananas", 300],
+    ["oranges", 200]
+]);
 
-// Create a Set
-const letters = new Set(["a", "b", "c"]);
-
-// List all Elements
 let text = "";
-letters.forEach(function(a) {
-    text += a + "<br>";
-})
+for (const x of fruits.entries()) { //values or  entries
+    text += x + "<br>";
+}
 
 document.getElementById("demo").innerHTML = text;
+
+
+
 
 /**
  * 
