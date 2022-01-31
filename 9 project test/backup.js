@@ -70,6 +70,26 @@ console.log(result); //[ 'green', 'red', 'green' ]
  */
 
 // ======================================
+// Try Catch 
+
+
+try {
+    alert("Hello sabbir, life is a test, and you're the candidate so need to work harder");
+} catch (e) {
+    document.getElementById("demo").innerHTML = e.message;
+}
+
+
+
+
+try {
+    adddlert("Hello sabbir, life is a test, and you're the candidate so need to work harder");
+} catch (e) {
+    document.getElementById("demo1").innerHTML = e.message;
+}
+
+
+
 // ======================================
 // ======================================
 // ======================================
