@@ -91,8 +91,80 @@ try {
 
 
 // ======================================
+
+function myFunction() {
+
+    // console.log(d);
+    const message = document.getElementById("demo2");
+    const message2 = document.getElementById("demo3");
+    message.innerHTML = "";
+
+    let d = document.getElementById("demo").value;
+
+
+    try {
+        if (d < 10) throw "less than 10";
+        if (d > 10) throw "large than 10";
+        if (d == 10 || d < 0) throw "eqal and less than 0 number can be access";
+
+    } catch (e) {
+        message.innerHTML = e.name;
+    } finally {
+        message2.innerHTML = "Okkkk finally its working "
+    }
+}
+
+
+
 // ======================================
-// ======================================
+
+
+let x = 5;
+
+try {
+    x = y + 1;
+} catch (err) {
+    document.getElementById("demo").innerHTML = err.name;
+}
+
+
+
+
+// ================  Scope  ==================
+
+function myFunction() {
+
+    // console.log(d);
+    const message = document.getElementById("demo2");
+    const message2 = document.getElementById("demo3");
+    message.innerHTML = "";
+
+    let d = document.getElementById("demo").value;
+
+
+    try {
+        if (d < 10) throw "less than 10";
+        if (d > 10) throw "large than 10";
+        if (d == 10 || d < 0) throw "eqal and less than 0 number can be access";
+
+    } catch (e) {
+        message.innerHTML = e;
+    } finally {
+        message2.innerHTML = "Okkkk finally its working "
+    }
+}
+
+
+
+let x = 5;
+
+try {
+    x = y + 1;
+} catch (err) {
+    document.getElementById("demo").innerHTML = err.name;
+}
+
+
 // ======================================
 // ======================================
 // ======================================
