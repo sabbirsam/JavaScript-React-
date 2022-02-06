@@ -165,8 +165,102 @@ try {
 }
 
 
+// ====================================== Strict mode
+
+"use strict";
+x = 3.14; // This will cause an error (x is not defined).
+
+console.log(x);
+
+
 // ======================================
+// this keyword
+function myFunction() {
+    const persion = {
+        fistName: "Sabbir",
+        lastName: "Ahmed",
+        age: 26,
+        fullName: function() {
+            return this.fistName + " " + this.lastName;
+        }
+    };
+    document.getElementById("s").innerHTML = persion.fullName();
+    document.getElementById("sa").innerHTML = persion.age;
+
+}
+
+// use this to any variable and function 
+let x = this;
+console.log(x);
+
+"use strict";
+let x = this;
+console.log(x);
+
+function z() {
+    return this;
+}
+console.log(z()); // undefined
+
+{
+    /* <button onclick="this.style.display='none' ">Click me</button>
+    <button onclick="this.style.background='red'">Click me</button> */
+}
+
+
+
+function myFunction() {
+
+    let c = document.getElementById("s");
+    c.style.display = 'none';
+
+}
+
+function myFunction2() {
+
+    let c = document.getElementById("s");
+    c.style.display = 'block';
+
+}
+
+
+
 // ======================================
-// ======================================
-// ======================================
+// realtime text view  
+/* <input id="input1" onkeyup="document.getElementById('input2').value=this.value" />
+<input id="input2" /> */
+
+{
+    /* <input id="q" onkeyup="myFunction() "></input>
+        <input id="c"></input> */
+}
+
+function myFunction() {
+
+    let c = document.getElementById("q").value;
+    // console.log(c);
+
+    document.getElementById("c").value = c;
+    document.getElementById("c").value = c.toLowerCase();
+
+}
+
+
+// ====================================== Call  || apply || bind
+
+const person = {
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
+}
+
+const sabbir = {
+    firstName: "Sabbir",
+    lastName: "Ahmed"
+}
+
+let c = person.fullName.call(sabbir);
+console.log(c);
+
+
 // ======================================
