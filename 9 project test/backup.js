@@ -263,4 +263,184 @@ let c = person.fullName.call(sabbir);
 console.log(c);
 
 
-// ======================================
+// ======================================JavaScript Arrow Function ================
+var a
+a = () => {
+    return "Hi";
+}
+console.log(a());
+
+
+// ..................................
+var va = function myFunction() {
+    return "Hi";
+}
+console.log(va());
+
+var a
+a = () => {
+    return "Hi";
+}
+console.log(a());
+
+// -===========================Difference 
+var va = function myFunction() {
+    return "Hi";
+}
+console.log(va());
+
+function sam() {
+    return "sam";
+}
+console.log(sam());
+
+
+// ============================
+
+var a = () => {
+    return "Hi";
+}
+console.log(a());
+
+// ======================================= end
+
+var a = () => {
+    return "Hi";
+}
+console.log(a());
+
+//  or  
+var a = () => "Hi";
+
+console.log(a());
+// =========================================
+var a = () => {
+    return "Hi";
+}
+console.log(a());
+
+//  or  
+var a = (val) => "Hi " + val;
+
+console.log(a("sam"));
+
+// or  
+
+var a = val => "Hi " + val;
+
+console.log(a("sam"));
+
+// ======================
+
+var a = () => {
+    return "Hi";
+}
+console.log(a());
+
+//  or  
+var a = (val) => "Hi " + val;
+
+console.log(a("sam"));
+
+// or  
+
+var a = val => "Hi " + val;
+
+console.log(a("sam"));
+
+
+/**
+ * Class 
+ */
+// Class
+
+class Car {
+
+    constructor(name, year) {
+        this.name = name;
+        this.year = year;
+    }
+
+}
+
+let myCar = new Car("Audi", 2020);
+console.log(myCar);
+console.log(myCar.name);
+console.log(myCar.year);
+
+/**
+Car { name: 'Audi', year: 2020 }
+Audi
+2020
+ */
+// ==================
+
+// Class
+
+class Car {
+
+    constructor(name, year) {
+        this.name = name;
+        this.year = year;
+    }
+
+    age() {
+        let date = new Date();
+        let c = date.getFullYear() - this.year;
+
+        return c;
+
+
+    }
+
+}
+
+function sam(a, b) {
+    return a + b;
+
+}
+
+let myCar = new Car("Audi", 2020);
+
+console.log(myCar.age());
+
+/**
+Car { name: 'Audi', year: 2020 }
+Audi
+2020
+ */
+
+
+/**
+ * Pass method with parameter 
+ */
+// Class
+
+class Car {
+
+    constructor(name, year) {
+        this.name = name;
+        this.year = year;
+    }
+
+    age(x) {
+        return x - this.year;
+    }
+
+}
+
+let date = new Date();
+let c = date.getFullYear();
+
+
+let myCar = new Car("Audi", 2020);
+
+console.log(myCar.age(c));
+
+/**
+Car { name: 'Audi', year: 2020 }
+Audi
+2020
+ */
+
+// =============================
