@@ -6,4 +6,6 @@ const message = () => {
 
 };
 
-export default message;
+// export default message;
+// export default message;
+export { message };
