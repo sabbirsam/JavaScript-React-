@@ -1,0 +1,26 @@
+<script>
+    //say its on person.js
+    export const name = "Jesse";
+    export const age = 40;
+
+    // or  
+
+    /**
+    const name = "sam";
+    const age = 14;
+
+    export { name, age };
+     */
+</script>
+
+<body>
+    <p id="i"></p>
+
+
+    <script type="module">
+        import {name, age} from "./person.js"; console.log(name); console.log(age);
+    </script>
+    <script type="module">
+        import message from "./message.js"; document.getElementById().innerHTML = message();
+    </script>
+</body>
