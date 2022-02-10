@@ -1,16 +1,33 @@
 var person = {
-    name: "sabbir",
-    age: 15,
+    firstName: "John",
+    lastName: "Doe",
+    language: "NO"
 };
-
-// Object.defineProperties(person, "name", {});
-Object.defineProperty(person, "name", {
-    value: "Ahmed",
-    writable: true,
-    enumerable: true,
-    configurable: true
+// Change a Property:
+Object.defineProperty(person, "language", {
+    get: function() { return language },
+    set: function(value) { language = value.toUpperCase() }
 });
+// Change language
+person.language = "en";
+// Display language
 
 
+console.log(person.language); //EN
 
-console.log(person.name); //Ahmed
+// Function Bind()
+
+const person = {
+    firstName: "John",
+    lastName: "Doe",
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
+}
+
+const member = {
+    firstName: "Hege",
+    lastName: "Nilsen",
+}
+
+let fullName = person.fullName.bind(member);
