@@ -46,6 +46,33 @@
 
 
 
+    <script>
+        const person = {
+            firstname: "John",
+            lastname: "Doe",
+            age: 50,
+            eyecolor: "blue"
+        };
+
+        document.getElementById("demo2").innerHTML = person.firstname + " is " + person.age + " years old.";
+    </script>
+
+
+
+
+    <script>
+        const person = {
+            firstname: "John",
+            lastname: "Doe",
+            age: 50,
+            eyecolor: "blue"
+        };
+
+        document.getElementById("demo3").innerHTML = person["firstname"] + " is " + person["age"] + " years old.";
+    </script>
+
+
+
 </body>
 
 </html>
