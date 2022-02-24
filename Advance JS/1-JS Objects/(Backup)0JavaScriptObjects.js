@@ -586,3 +586,93 @@ MyInfo.name = function() {
 }
 
 console.log(MyInfo);
+
+
+function Person(first, last, age, eye) {
+    this.FirstName = first;
+    this.LastName = last;
+    this.age = age;
+    this.eye = eye;
+    this.lan = "Bangla"
+};
+
+const MyInfo = new Person("sabbir", "ahmed", 15, "Brown");
+
+MyInfo.name = function() {
+    return this.FirstName + " " + this.LastName;
+}
+
+console.log(MyInfo.name());
+
+
+/**
+ * JavaScript Object Prototypes
+ */
+
+function Persion(name, id, age) {
+    this.Name = name;
+    this.id = id;
+    this.age = age;
+    this.color = "red";
+}
+
+Persion.prototype.language = "English";
+Persion.prototype.FullName = function() {
+    return this.Name + " " + this.color;
+}
+
+const Infor = new Persion("Sabbir", 17103188, 25);
+console.log(Infor); //Persion { Name: 'Sabbir', id: 17103188, age: 25, color: 'red' }
+
+console.log(Infor.language); //English
+console.log(Infor.FullName()); //English
+
+
+/**
+ * JavaScript Iterables
+ */
+
+const name = "MD SABBIR AHMEd";
+
+let t = "";
+for (const x of name) {
+    t += x + "\n";
+}
+console.log(t);
+/**
+M
+D
+ 
+S
+A
+B
+B
+I
+R
+ 
+A
+H
+M
+E
+d
+ 
+ */
+
+
+/**
+ * JavaScript Iterables
+ */
+
+const name = ["a", "b", "c"];
+
+let t = "";
+for (const x of name) {
+    t += x + "\n";
+}
+console.log(t);
+/**
+ a
+b
+c
+ 
+ */
