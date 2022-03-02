@@ -2,20 +2,20 @@
  *   JavaScript Maps
  */
 
-// const someName = new Map();
-const someName = new Map(
-    [
-        ["fruit name", "Apple"],
-        ["Brand", "ATISH"],
-    ]
-);
+// Keys get direct
+const apples = { name: 'Apples' };
+const bananas = { name: 'Bananas' };
+const oranges = { name: 'Oranges' };
 
-someName.set("Manufracture", "sabbir");
+// Create a Map
+const fruits = new Map();
 
-console.log(someName.get("fruit name"));
-console.log(someName.get("Manufracture"));
+// Add the Objects to the Map
+fruits.set(apples, 500);
+fruits.set(bananas, 300);
+fruits.set(oranges, 200);
+
+console.log(fruits.get(apples));
 /**
-Apple
-sabbir
-
+500
  */

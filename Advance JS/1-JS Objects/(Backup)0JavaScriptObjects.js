@@ -967,3 +967,195 @@ Apple
 sabbir
 
  */
+
+/**
+ *   JavaScript Maps delete functionality 
+ */
+
+// const someName = new Map();
+const someName = new Map(
+    [
+        ["fruit name", "Apple"],
+        ["Brand", "ATISH"],
+    ]
+);
+
+someName.set("Manufracture", "sabbir");
+someName.set("demo", "ok demo");
+
+someName.delete("Brand");
+
+console.log(someName.get("Brand"));
+
+/**
+ *   JavaScript Maps
+ */
+
+// const someName = new Map();
+const someName = new Map(
+    [
+        ["fruit name", "Apple"],
+        ["Brand", "ATISH"],
+    ]
+);
+
+someName.clear();
+
+console.log(someName.size); // 0
+
+
+
+// const someName = new Map();
+const someName = new Map(
+    [
+        ["fruit name", "Apple"],
+        ["Brand", "ATISH"],
+    ]
+);
+
+// someName.clear();
+
+
+console.log(someName.has("Brand")); // true
+
+// const someName = new Map();
+const someName = new Map(
+    [
+        ["fruit name", "Apple"],
+        ["Brand", "ATISH"],
+    ]
+);
+
+// someName.clear();
+
+
+console.log(someName instanceof Map); // true
+
+// const someName = new Map();
+const someName = new Map(
+    [
+        ["fruit name", "Apple"],
+        ["Brand", "ATISH"],
+    ]
+);
+
+let t = "";
+
+someName.forEach(
+    function(valuem, key) {
+        t += key + "\n";
+    }
+);
+console.log(t);
+/**
+fruit name
+Brand
+
+ */
+
+
+// const someName = new Map();
+const someName = new Map(
+    [
+        ["fruit name", "Apple"],
+        ["Brand", "ATISH"],
+    ]
+);
+
+let t = "";
+
+someName.forEach(
+    function(value, key) {
+        t += value + "\n";
+    }
+);
+console.log(t);
+/**
+Apple
+ATISH
+
+ */
+
+
+
+// Keys get direct
+const someName = new Map(
+    [
+        ["fruit name", "Apple"],
+        ["Brand", "ATISH"],
+    ]
+);
+
+let t = "";
+
+for (const x of someName.keys()) {
+    t += x + "\n";
+}
+console.log(t);
+/**
+fruit name
+Brand
+
+ */
+
+
+// values get direct
+const someName = new Map(
+    [
+        ["fruit name", "Apple"],
+        ["Brand", "ATISH"],
+    ]
+);
+
+let t = "";
+
+for (const x of someName.values()) {
+    t += x + "\n";
+}
+console.log(t);
+/**
+Apple
+ATISH
+ */
+
+
+// all find 
+
+// Keys get direct
+const someName = new Map(
+    [
+        ["fruit name", "Apple"],
+        ["Brand", "ATISH"],
+    ]
+);
+
+let t = "";
+
+for (const x of someName.entries()) {
+    t += x + "\n";
+}
+console.log(t);
+/**
+fruit name,Apple
+Brand,ATISH
+ */
+
+
+
+// Keys get direct
+const apples = { name: 'Apples' };
+const bananas = { name: 'Bananas' };
+const oranges = { name: 'Oranges' };
+
+// Create a Map
+const fruits = new Map();
+
+// Add the Objects to the Map
+fruits.set(apples, 500);
+fruits.set(bananas, 300);
+fruits.set(oranges, 200);
+
+console.log(fruits.get(apples));
+/**
+500
+ */
