@@ -676,3 +676,294 @@ b
 c
  
  */
+
+const name = "Sabbir Ahmed Sam";
+let a = '';
+for (const x of name) {
+
+    a += x + "\n";
+}
+console.log(a);
+
+
+
+/**
+ * JavaScript JavaScript Iterators Next()
+ */
+
+// Home Made Iterable
+function myNumbers() {
+    let n = 0;
+    return {
+        next: function() {
+            n += 10;
+            return { value: n, done: false };
+        }
+    };
+}
+
+// Create Iterable
+const n = myNumbers();
+console.log(n.next()); // Returns 10
+console.log(n.next()); // Returns 20
+console.log(n.next()); // Returns 30
+console.log(n.next().value); // Returns 30
+
+/**
+{ value: 10, done: false }
+{ value: 20, done: false }
+{ value: 30, done: false }
+40
+
+ */
+
+
+function demo() {
+    let n = 2;
+    return {
+        next: function() {
+            n += 2;
+            return {
+                value: n,
+                done: true
+            }
+        }
+    }
+}
+
+const n = new demo();
+// console.log(n.next());
+console.log(n.next().value);
+
+
+// increase by `1`
+
+function demo() {
+    let n = 0;
+    return {
+        next: function() {
+            n += 1;
+            return {
+                value: n,
+                done: true
+            }
+        }
+    }
+}
+
+const n = new demo();
+// console.log(n.next());
+console.log(n.next().value);
+console.log(n.next().value);
+console.log(n.next().value);
+
+
+/**
+ *   JavaScript iterable is an object that has a Symbol.iterator.
+ */
+
+myNUmber = {};
+
+myNUmber[Symbol.iterator] = function() {
+    let n = 0;
+    done = false;
+    return {
+        // next: function() {
+        next() {
+            n += 1;
+            if (n == 10) { done = true }
+            return {
+                value: n,
+                done: done
+            };
+        }
+    };
+}
+let t = "";
+for (const x of myNUmber) {
+    t += x + "\n";
+}
+
+
+console.log(t);
+
+
+/**
+ *   JavaScript Set()
+ */
+
+const elements = new Set(["a", "b", "c"]);
+console.log(elements); //Set(3) { 'a', 'b', 'c' }
+console.log(elements.size); //3
+
+
+/**
+ *   JavaScript Set() add()
+ */
+
+const elements = new Set(["a", "b", "c"]);
+
+elements.add("d");
+elements.add("e");
+console.log(elements); //Set(5) { 'a', 'b', 'c', 'd', 'e' }
+console.log(elements.size); //5
+
+/**
+ *   JavaScript Set()
+ */
+
+const a = "a";
+const b = "b";
+const c = "c";
+
+const all = new Set();
+
+all.add(a, b, c); // only add first one  //Set(1) { 'a' }
+all.add(b); // 
+all.add(c); // 
+console.log(all); //Set(3) { 'a', 'b', 'c' }
+
+
+
+/**
+ *   JavaScript Set()
+ */
+
+const a = "a";
+const b = "b";
+const c = "c";
+
+const all = new Set();
+
+all.add(a, b, c); // only add first one  //Set(1) { 'a' }
+all.add(b); // 
+all.add(c); // 
+
+
+let t = "";
+
+all.forEach(function(value) {
+    t += value;
+});
+
+console.log(t); // abc
+
+
+/**
+ *   JavaScript values()
+ */
+
+const a = "d";
+const b = "e";
+const c = "f";
+
+const all = new Set(["a", "b", "c"]);
+
+all.add(a, b, c); // only add first one  //Set(1) { 'a' }
+all.add(b); // 
+all.add(c); //
+
+console.log(all.values()); //[Set Iterator] { 'a', 'b', 'c', 'd', 'e', 'f' }
+
+
+
+
+
+
+
+/**
+ *   JavaScript Set()
+ */
+
+const a = "d";
+const b = "e";
+const c = "f";
+
+const all = new Set(["a", "b", "c"]);
+
+all.add(a, b, c); // only add first one  //Set(1) { 'a' }
+all.add(b); // 
+all.add(c); //
+
+console.log(all.values()); //[Set Iterator] { 'a', 'b', 'c', 'd', 'e', 'f' }
+
+let q = "";
+for (const a of all.values()) {
+    q += a + "\n";
+}
+
+console.log(q);
+
+/**
+ 
+[Set Iterator] { 'a', 'b', 'c', 'd', 'e', 'f' }
+a
+b
+c
+d
+e
+f
+ 
+ 
+ */
+
+/**
+ *   JavaScript entries()
+ */
+
+
+const all = new Set(["a", "b", "c"]);
+
+console.log(all.entries()); // [Set Entries] { [ 'a', 'a' ], [ 'b', 'b' ], [ 'c', 'c' ] }
+let a = "";
+
+for (const b of all.entries()) {
+    a += b + "\n";
+}
+console.log(a);
+/**
+ a,a
+b,b
+c,c
+ 
+ 
+ */
+
+
+/**
+ *   JavaScript Maps
+ */
+
+// const someName = new Map();
+const someName = new Map(
+    [
+        ["fruit name", "Apple"],
+        ["Brand", "ATISH"],
+    ]
+);
+
+console.log(someName.get("fruit name"));
+
+
+
+/**
+ *   JavaScript Maps
+ */
+
+// const someName = new Map();
+const someName = new Map(
+    [
+        ["fruit name", "Apple"],
+        ["Brand", "ATISH"],
+    ]
+);
+
+someName.set("Manufracture", "sabbir");
+
+console.log(someName.get("fruit name"));
+console.log(someName.get("Manufracture"));
+/**
+Apple
+sabbir
+
+ */
