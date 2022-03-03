@@ -1,21 +1,28 @@
 /**
- *   JavaScript Maps
+ *   JavaScript JavaScript ES5 Object Methods
+ * Managing Objects
+ * Changing a Property Value   Object.defineProperty
+ * Object.defineProperty(object, property, {value : value})
  */
 
-// Keys get direct
-const apples = { name: 'Apples' };
-const bananas = { name: 'Bananas' };
-const oranges = { name: 'Oranges' };
+const Name = {
+    firstName: "sabbir",
+    Lastname: "Ahmeed",
+    Language: "Bangla"
+}
 
-// Create a Map
-const fruits = new Map();
+Object.defineProperty(Name, "Language", {
+    // writable: false,
+    // enumerable:false,
+    value: "No",
+});
 
-// Add the Objects to the Map
-fruits.set(apples, 500);
-fruits.set(bananas, 300);
-fruits.set(oranges, 200);
+console.log(Name); //{ firstName: 'sabbir', Lastname: 'Ahmeed', Language: 'No' }
+console.log(Name.Language); //No
 
-console.log(fruits.get(apples));
-/**
-500
- */
+// Returns all properties as an array
+// Object.getOwnPropertyNames(object)
+console.log(Object.getOwnPropertyNames(Name)); // [ 'firstName', 'Lastname', 'Language' ]
+
+console.log(Object.getPrototypeOf(Name));
+console.log(Object.keys(Name)); // [ 'firstName', 'Lastname', 'Language' ]
