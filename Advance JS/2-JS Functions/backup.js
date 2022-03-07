@@ -251,3 +251,24 @@ const per = {
 
 let c = person.fullName.call(per, "Dhaka", "Bangladesh");
 console.log(c); //Johan Khan,Dhaka,Bangladesh
+
+
+/**
+ * Simulate a Max Method on Arrays
+ */
+
+const person = {
+    firstName: "Sabbir",
+    lastName: "Ahmed",
+    FullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
+}
+const member = {
+    firstName: "Jamal",
+    lastName: "Kamal"
+}
+
+let c = person.FullName.bind(member);
+console.log(c()); // Jamal Kamal 
+//c ()
