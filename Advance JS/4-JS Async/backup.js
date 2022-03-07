@@ -322,3 +322,73 @@ myPromise.then(
         result(error);
     }
 );
+
+/**
+ * JavaScript Async Syntax
+ * Async Syntax
+ */
+
+function myName() {
+    return "Sabbir Ahmed";
+}
+
+async function myNames() {
+    return "Sabbir Ahmed";
+}
+
+// similar 
+function myNamess() {
+    return Promise.resolve("Sabbir Ahmed");
+}
+
+
+/**
+ * JavaScript Async Syntax
+ * Async Syntax
+ */
+
+// similar 
+// function myNamess() {
+//     return Promise.resolve("Sabbir Ahmed");
+// }
+
+async function myNames() {
+    return "Sabbir Ahmed";
+}
+
+
+// function myNames() {
+//     return Promise.resolve("Sabbir Ahmed");
+// }
+
+
+myNames().then(
+    function(value) {
+        myDisplay(value);
+    },
+
+    function(error) {
+        myDisplay(error);
+    }
+
+);
+
+function myDisplay(res) {
+    console.log(res);
+}
+
+
+/**
+ * JavaScript Await Syntax
+ * Await Syntax
+ */
+
+async function LoveandWar() {
+    let myPromise = new Promise(function(resolve, reject) {
+        resolve("Ok fine I will love you");
+    });
+
+    console.log(await myPromise);
+}
+
+LoveandWar(); // Ok fine I will love you
