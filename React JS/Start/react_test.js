@@ -28,3 +28,39 @@ document.querySelectorAll('.like_button_container')
             domContainer
         );
     });
+
+
+
+/**
+ * Sumit explanation
+ */
+const domContainerss = document.querySelector("#root-2");
+
+ReactDOM.render('Any thing like my name sam', domContainerss)
+
+/**
+ * create div and add text
+ */
+
+const domContainersss = document.querySelector("#root-3");
+
+const myElements = React.createElement("div", null, "Hello sam");
+
+ReactDOM.render(myElements, domContainersss)
+
+/**
+ * add div then p with text
+ */
+
+const domContainers = document.querySelector("#root");
+
+const myElement = React.createElement("div", null, [
+    React.createElement("p", null, "Hello Sasssm"),
+    React.createElement("p", null, "Hello Sam")
+]);
+
+ReactDOM.render(myElement, domContainers)
+
+/**
+ * add div then multiple p with text
+ */
