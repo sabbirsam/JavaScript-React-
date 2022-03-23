@@ -1,0 +1,99 @@
+/* h1 span {
+    color: red;
+    font-size: 25px;
+}
+
+h1 span:nth-child(2) {
+    color: rgb(0, 255, 34);
+}
+
+h1 span:nth-child(3) {
+    color: rgb(52, 17, 134);
+} */
+
+
+/* p {
+    text-align: right;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: overline;
+    text-decoration: uppercase;
+    text-transform: capitalize;
+    font-size: x-large;
+    line-height: 120px;
+    word-spacing: 15px
+}
+
+h2 {
+    text-align: center;
+}
+
+h2 span:nth-child(1),
+h2 span:nth-child(3) {
+    vertical-align: top;
+    vertical-align: bottom;
+    vertical-align: middle;
+    color: blueviolet;
+    font-size: 13px;
+} */
+
+
+/* .box {
+    width: 800px;
+    height: 450px;
+    border: 1px solid green;
+    background-color: green;
+    margin: auto;
+    margin-top: 200px;
+    overflow: hidden;
+}
+
+.circle {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: red;
+    margin: auto;
+    margin-top: 53px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+ */
+
+.post {
+    width: 600px;
+    height: 800px;
+    margin: auto;
+    background-color: black;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.post p {
+    text-align: justify;
+    color: rgb(245, 245, 245);
+    text-indent: 92px;
+}
+
+.post h2 {
+    color: aliceblue;
+}
+
+.post img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    /* by default inline  */
+    /* margin: auto; kaj korbe na karon inline kora */
+    display: block;
+    margin: auto;
+    /* margin-left: 150px; */
+}
